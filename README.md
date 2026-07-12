@@ -13,7 +13,7 @@ This is a small static website for GitHub Pages. It has no build step and no dep
 ## First Change
 
 1. Open `index.html`.
-2. Change one sentence in the Projects section.
+2. Change the sentence under the name.
 3. Commit the change.
 4. Wait for GitHub Pages to publish.
 5. Refresh the live site.
