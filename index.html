@@ -3,52 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Henry's Space Lab: a starter personal site for space games, experiments, and creative coding.">
-  <title>Henry's Space Lab</title>
+  <meta name="description" content="Henry Rado-Lightfoot: games, code experiments, and build notes.">
+  <title>Henry Rado-Lightfoot</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <canvas id="starfield" aria-hidden="true"></canvas>
 
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Henry's Space Lab home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>Henry's Space Lab</span>
+    <a class="brand" href="index.html" aria-label="Henry Rado-Lightfoot home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>Henry Rado-Lightfoot</span>
     </a>
     <nav aria-label="Main navigation">
       <a href="#projects">Projects</a>
-      <a href="#missions">Missions</a>
-      <a href="#notes">Notes</a>
+      <a href="#log">Log</a>
+      <a href="#rules">Rules</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="orbit-art" aria-hidden="true">
-        <span class="star"></span>
-        <span class="orbit orbit-one"></span>
-        <span class="orbit orbit-two"></span>
-        <span class="planet planet-blue"></span>
-        <span class="planet planet-red"></span>
-        <span class="comet"></span>
-      </div>
       <div class="hero-copy">
-        <p class="eyebrow">Personal site and mission log</p>
-        <h1 id="hero-title">Building space games, planet experiments, and tiny web projects.</h1>
+        <p class="eyebrow">Games / code / experiments</p>
+        <h1 id="hero-title">Small builds. Better each time.</h1>
         <p>
-          This is a simple starter site for sharing safe project updates,
-          astronomy ideas, and experiments made while learning game development.
+          A personal dev page for tracking game prototypes, website changes,
+          and whatever is interesting enough to build next.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">See projects</a>
-          <a class="button secondary" href="#missions">Pick a mission</a>
+          <a class="button primary" href="#projects">View projects</a>
+          <a class="button secondary" href="#log">Latest log</a>
         </div>
       </div>
+
+      <aside class="console-panel" aria-label="Current status">
+        <div class="console-top">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <pre><code>henry@dev:~$ status
+
+profile: online
+current: Planet Lab
+stack: HTML / CSS / JS / Unity
+next: edit this page
+
+henry@dev:~$ ideas
+- make the site feel less default
+- build a tiny web toy
+- test a VR prototype
+- save every working version</code></pre>
+      </aside>
     </section>
 
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="section-heading">
-        <p class="eyebrow">Now building</p>
+        <p class="eyebrow">Build queue</p>
         <h2 id="projects-title">Projects</h2>
       </div>
       <div class="project-grid">
@@ -56,71 +68,71 @@
           <p class="tag">VR</p>
           <h3>Planet Lab</h3>
           <p>
-            A standalone Meta Quest project where planets can be grabbed,
-            placed into orbit, and tested around a star.
+            A Meta Quest starter project for experimenting with grabbing,
+            placing objects, and tuning simple physics.
           </p>
         </article>
         <article class="project-card">
           <p class="tag">Web</p>
-          <h3>This Website</h3>
+          <h3>This Site</h3>
           <p>
-            A public GitHub Pages site that can be edited one small change at a
-            time, then saved with a commit.
+            A GitHub Pages site that can be changed directly in the browser:
+            edit, commit, refresh.
           </p>
         </article>
         <article class="project-card">
-          <p class="tag">Next</p>
-          <h3>Comet Tracker</h3>
+          <p class="tag">Prototype</p>
+          <h3>Next Weird Thing</h3>
           <p>
-            A future mini-project for drawing comet paths and learning how
-            speed, gravity, and direction change an orbit.
+            A place for small experiments: a clicker, physics toy, level idea,
+            shader test, or mini tool.
           </p>
         </article>
       </div>
     </section>
 
-    <section class="mission-band" id="missions" aria-labelledby="missions-title">
+    <section class="log-band" id="log" aria-labelledby="log-title">
       <div>
         <p class="eyebrow">Starter challenge</p>
-        <h2 id="missions-title">First Website Mission</h2>
+        <h2 id="log-title">First Edit</h2>
         <p>
-          Change one card on this page, commit it in GitHub, and refresh the
-          live site after GitHub Pages finishes publishing.
+          Make one small change, commit it, and wait for GitHub Pages to publish.
+          Tiny changes count. That is the whole point.
         </p>
       </div>
-      <ol class="mission-list">
-        <li>Edit a sentence in <code>index.html</code>.</li>
-        <li>Change one color in <code>styles.css</code>.</li>
-        <li>Commit the change with a short message.</li>
-        <li>Open the website and confirm it updated.</li>
+      <ol class="log-list">
+        <li>Change one line in <code>index.html</code>.</li>
+        <li>Adjust one color in <code>styles.css</code>.</li>
+        <li>Commit with a short message.</li>
+        <li>Refresh the live site and check it.</li>
       </ol>
     </section>
 
-    <section class="section notes" id="notes" aria-labelledby="notes-title">
+    <section class="section notes" id="rules" aria-labelledby="rules-title">
       <div class="section-heading">
-        <p class="eyebrow">Safe publishing</p>
-        <h2 id="notes-title">Notes Before Posting</h2>
+        <p class="eyebrow">Public repo rules</p>
+        <h2 id="rules-title">Keep It Clean</h2>
       </div>
       <div class="note-grid">
         <article>
-          <h3>Good to share</h3>
-          <p>Project screenshots, code notes, astronomy facts, and what changed in a game level.</p>
+          <h3>Good</h3>
+          <p>Build notes, screenshots, code experiments, game ideas, and things that are already public.</p>
         </article>
         <article>
-          <h3>Ask first</h3>
-          <p>Photos, real schedules, exact locations, school details, or anything about other people.</p>
+          <h3>Ask First</h3>
+          <p>Photos, downloads, links to accounts, contact forms, or anything involving other people.</p>
         </article>
         <article>
-          <h3>Never share</h3>
-          <p>Passwords, recovery codes, private messages, payment info, or home address details.</p>
+          <h3>Never</h3>
+          <p>Passwords, recovery codes, payment info, phone numbers, home address, school, or schedules.</p>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>Henry's Space Lab</span>
-    <span>Made with HTML, CSS, JavaScript, and curiosity.</span>
+    <span>henryradolightfoot.com</span>
+    <span>HTML / CSS / JS</span>
   </footer>
 
   <script src="script.js"></script>

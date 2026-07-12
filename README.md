@@ -1,4 +1,4 @@
-# Henry's Space Lab Website
+# Henry Rado-Lightfoot Website
 
 This is a small static website for GitHub Pages. It has no build step and no dependencies.
 
@@ -6,7 +6,7 @@ This is a small static website for GitHub Pages. It has no build step and no dep
 
 - `index.html` controls the page content.
 - `styles.css` controls the colors, layout, and responsive design.
-- `script.js` draws the animated star background.
+- `script.js` draws the animated background.
 - `CNAME` tells GitHub Pages to use `henryradolightfoot.com`.
 - `.nojekyll` tells GitHub Pages to publish the files directly.
 

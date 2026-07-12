@@ -1,15 +1,15 @@
 :root {
   color-scheme: dark;
-  --bg: #070b18;
-  --panel: rgba(12, 20, 40, 0.72);
-  --panel-strong: rgba(16, 28, 56, 0.9);
-  --text: #f4f7fb;
-  --muted: #b6c2d3;
-  --line: rgba(255, 255, 255, 0.14);
-  --blue: #60d5ff;
-  --gold: #ffd166;
-  --coral: #ff7a70;
-  --green: #7ce7b2;
+  --bg: #08090c;
+  --panel: rgba(17, 19, 25, 0.78);
+  --panel-strong: rgba(21, 24, 32, 0.94);
+  --text: #f2f4f8;
+  --muted: #9aa3b2;
+  --line: rgba(255, 255, 255, 0.12);
+  --lime: #b9ff5a;
+  --cyan: #62d7ff;
+  --red: #ff5d73;
+  --amber: #ffcf5a;
 }
 
 * {
@@ -24,9 +24,13 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at 20% 10%, rgba(96, 213, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 80% 0%, rgba(255, 209, 102, 0.12), transparent 30%),
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at 12% 18%, rgba(98, 215, 255, 0.13), transparent 28%),
+    radial-gradient(circle at 88% 4%, rgba(185, 255, 90, 0.09), transparent 26%),
     var(--bg);
+  background-size: 42px 42px, 42px 42px, auto, auto, auto;
   color: var(--text);
 }
 
@@ -38,7 +42,7 @@ code {
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 0.1rem 0.35rem;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.07);
   color: #ffffff;
 }
 
@@ -48,6 +52,7 @@ code {
   z-index: -1;
   width: 100%;
   height: 100%;
+  opacity: 0.46;
 }
 
 .site-header,
@@ -68,16 +73,21 @@ code {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
+  color: var(--text);
   font-weight: 800;
   text-decoration: none;
 }
 
 .brand-mark {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 24px rgba(255, 209, 102, 0.85);
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #11151d;
+  color: var(--lime);
+  font: 800 0.9rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 nav {
@@ -90,8 +100,8 @@ nav {
 
 nav a {
   border: 1px solid transparent;
-  border-radius: 999px;
-  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
   color: var(--muted);
   text-decoration: none;
 }
@@ -110,7 +120,7 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(240px, 0.88fr) minmax(280px, 1.12fr);
+  grid-template-columns: minmax(280px, 1.04fr) minmax(300px, 0.96fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 4.5rem);
   min-height: calc(100vh - 156px);
@@ -118,14 +128,13 @@ main {
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 720px;
 }
 
 .eyebrow {
   margin: 0 0 0.8rem;
-  color: var(--green);
-  font-size: 0.78rem;
-  font-weight: 800;
+  color: var(--lime);
+  font: 800 0.78rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -138,34 +147,34 @@ p {
 }
 
 h1 {
-  max-width: 11ch;
+  max-width: 12ch;
   margin-bottom: 1.1rem;
-  font-size: clamp(3.4rem, 9vw, 6.9rem);
-  line-height: 0.92;
+  font-size: clamp(3.4rem, 8vw, 6.6rem);
+  line-height: 0.94;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 0.35rem;
-  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1;
   letter-spacing: 0;
 }
 
 h3 {
   margin-bottom: 0.75rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 p {
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.03rem;
   line-height: 1.7;
 }
 
 .hero-copy > p:not(.eyebrow) {
-  max-width: 52rem;
-  font-size: 1.2rem;
+  max-width: 44rem;
+  font-size: 1.18rem;
 }
 
 .hero-actions {
@@ -179,114 +188,75 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  border-radius: 999px;
-  padding: 0 1.1rem;
+  min-height: 44px;
+  border-radius: 8px;
+  padding: 0 1rem;
   font-weight: 800;
   text-decoration: none;
 }
 
 .button.primary {
-  background: var(--blue);
-  color: #001826;
+  background: var(--lime);
+  color: #111600;
 }
 
 .button.secondary {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.07);
 }
 
-.orbit-art {
-  position: relative;
-  min-height: 420px;
+.console-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)), var(--panel-strong);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
   overflow: hidden;
 }
 
-.star,
-.orbit,
-.planet,
-.comet {
-  position: absolute;
-  display: block;
+.console-top {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  min-height: 38px;
+  border-bottom: 1px solid var(--line);
+  padding: 0 0.85rem;
 }
 
-.star {
-  top: 48%;
-  left: 50%;
-  width: 64px;
-  height: 64px;
+.console-top span {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--gold);
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 70px rgba(255, 209, 102, 0.78);
+  background: var(--muted);
 }
 
-.orbit {
-  top: 50%;
-  left: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotate(-18deg);
+.console-top span:nth-child(1) {
+  background: var(--red);
 }
 
-.orbit-one {
-  width: 210px;
-  height: 132px;
+.console-top span:nth-child(2) {
+  background: var(--amber);
 }
 
-.orbit-two {
-  width: 340px;
-  height: 214px;
+.console-top span:nth-child(3) {
+  background: var(--lime);
 }
 
-.planet {
-  border-radius: 50%;
+pre {
+  margin: 0;
+  padding: clamp(1rem, 3vw, 1.45rem);
+  overflow-x: auto;
 }
 
-.planet-blue {
-  top: 28%;
-  left: 22%;
-  width: 38px;
-  height: 38px;
-  background: var(--blue);
-  box-shadow: 0 0 26px rgba(96, 213, 255, 0.55);
-}
-
-.planet-red {
-  right: 16%;
-  bottom: 30%;
-  width: 28px;
-  height: 28px;
-  background: var(--coral);
-  box-shadow: 0 0 24px rgba(255, 122, 112, 0.5);
-}
-
-.comet {
-  top: 16%;
-  right: 18%;
-  width: 72px;
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, #ffffff);
-  transform: rotate(-24deg);
-}
-
-.comet::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -5px;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #ffffff;
+pre code {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #dce7f7;
+  font: 500 0.93rem/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 .section,
-.mission-band {
+.log-band {
   padding: 4.5rem 0;
 }
 
@@ -303,7 +273,7 @@ p {
 
 .project-card,
 .note-grid article {
-  min-height: 230px;
+  min-height: 220px;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 1.2rem;
@@ -314,15 +284,15 @@ p {
 .tag {
   display: inline-flex;
   margin-bottom: 1.1rem;
-  border-radius: 999px;
-  padding: 0.25rem 0.55rem;
-  background: rgba(96, 213, 255, 0.14);
-  color: var(--blue);
-  font-size: 0.78rem;
-  font-weight: 800;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  background: rgba(98, 215, 255, 0.12);
+  color: var(--cyan);
+  font: 800 0.76rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  text-transform: uppercase;
 }
 
-.mission-band {
+.log-band {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 2rem;
@@ -331,16 +301,16 @@ p {
   border-bottom: 1px solid var(--line);
 }
 
-.mission-list {
+.log-list {
   display: grid;
   gap: 0.7rem;
   margin: 0;
   padding: 0;
-  counter-reset: mission;
+  counter-reset: log;
   list-style: none;
 }
 
-.mission-list li {
+.log-list li {
   position: relative;
   min-height: 58px;
   border: 1px solid var(--line);
@@ -350,9 +320,9 @@ p {
   color: var(--text);
 }
 
-.mission-list li::before {
-  counter-increment: mission;
-  content: counter(mission);
+.log-list li::before {
+  counter-increment: log;
+  content: counter(log);
   position: absolute;
   top: 0.85rem;
   left: 1rem;
@@ -360,11 +330,10 @@ p {
   place-items: center;
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: 50%;
-  background: var(--gold);
-  color: #241800;
-  font-size: 0.85rem;
-  font-weight: 900;
+  border-radius: 6px;
+  background: var(--lime);
+  color: #111600;
+  font: 900 0.82rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 .site-footer {
@@ -386,7 +355,7 @@ p {
   }
 
   .hero,
-  .mission-band,
+  .log-band,
   .project-grid,
   .note-grid {
     grid-template-columns: 1fr;
@@ -397,13 +366,12 @@ p {
     padding-top: 1rem;
   }
 
-  .orbit-art {
-    min-height: 320px;
+  .console-panel {
     order: -1;
   }
 
   h1 {
-    max-width: 10ch;
-    font-size: clamp(3rem, 16vw, 4.8rem);
+    max-width: 11ch;
+    font-size: clamp(3rem, 15vw, 4.8rem);
   }
 }
