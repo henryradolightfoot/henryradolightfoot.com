@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Henry's Space Lab: a starter personal site for space games, experiments, and creative coding.">
+  <title>Henry's Space Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Henry's Space Lab home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Henry's Space Lab</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#missions">Missions</a>
+      <a href="#notes">Notes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="orbit-art" aria-hidden="true">
+        <span class="star"></span>
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+        <span class="planet planet-blue"></span>
+        <span class="planet planet-red"></span>
+        <span class="comet"></span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Personal site and mission log</p>
+        <h1 id="hero-title">Building space games, planet experiments, and tiny web projects.</h1>
+        <p>
+          This is a simple starter site for sharing safe project updates,
+          astronomy ideas, and experiments made while learning game development.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">See projects</a>
+          <a class="button secondary" href="#missions">Pick a mission</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">Now building</p>
+        <h2 id="projects-title">Projects</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="tag">VR</p>
+          <h3>Planet Lab</h3>
+          <p>
+            A standalone Meta Quest project where planets can be grabbed,
+            placed into orbit, and tested around a star.
+          </p>
+        </article>
+        <article class="project-card">
+          <p class="tag">Web</p>
+          <h3>This Website</h3>
+          <p>
+            A public GitHub Pages site that can be edited one small change at a
+            time, then saved with a commit.
+          </p>
+        </article>
+        <article class="project-card">
+          <p class="tag">Next</p>
+          <h3>Comet Tracker</h3>
+          <p>
+            A future mini-project for drawing comet paths and learning how
+            speed, gravity, and direction change an orbit.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="mission-band" id="missions" aria-labelledby="missions-title">
+      <div>
+        <p class="eyebrow">Starter challenge</p>
+        <h2 id="missions-title">First Website Mission</h2>
+        <p>
+          Change one card on this page, commit it in GitHub, and refresh the
+          live site after GitHub Pages finishes publishing.
+        </p>
+      </div>
+      <ol class="mission-list">
+        <li>Edit a sentence in <code>index.html</code>.</li>
+        <li>Change one color in <code>styles.css</code>.</li>
+        <li>Commit the change with a short message.</li>
+        <li>Open the website and confirm it updated.</li>
+      </ol>
+    </section>
+
+    <section class="section notes" id="notes" aria-labelledby="notes-title">
+      <div class="section-heading">
+        <p class="eyebrow">Safe publishing</p>
+        <h2 id="notes-title">Notes Before Posting</h2>
+      </div>
+      <div class="note-grid">
+        <article>
+          <h3>Good to share</h3>
+          <p>Project screenshots, code notes, astronomy facts, and what changed in a game level.</p>
+        </article>
+        <article>
+          <h3>Ask first</h3>
+          <p>Photos, real schedules, exact locations, school details, or anything about other people.</p>
+        </article>
+        <article>
+          <h3>Never share</h3>
+          <p>Passwords, recovery codes, private messages, payment info, or home address details.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Henry's Space Lab</span>
+    <span>Made with HTML, CSS, JavaScript, and curiosity.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
