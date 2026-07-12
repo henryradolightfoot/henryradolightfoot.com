@@ -5,7 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Henry Rado-Lightfoot's personal site.">
   <title>henry rado-lightfoot</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #000;
+      color: #d6d6d6;
+      font: 13px/1.55 "Courier New", Courier, monospace;
+    }
+    .screen {
+      width: min(360px, calc(100vw - 32px));
+      text-align: center;
+    }
+    .box {
+      border: 1px solid #2d2d2d;
+      padding: 18px 20px 20px;
+    }
+    p, h1 {
+      margin: 0;
+      font: inherit;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin-top: 10px;
+      font-weight: 400;
+    }
+    .domain, .line { color: #747474; }
+    .line { margin-top: 10px; }
+    nav { margin-top: 16px; }
+    a {
+      color: #9db7ff;
+      text-decoration: none;
+    }
+    a:hover, a:focus-visible {
+      color: #d6d6d6;
+      text-decoration: underline;
+      outline: none;
+    }
+  </style>
 </head>
 <body>
   <main class="screen" aria-label="personal site">
