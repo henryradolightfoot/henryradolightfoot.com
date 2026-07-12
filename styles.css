@@ -1,13 +1,19 @@
 :root {
   color-scheme: dark;
-  --bg: #0d0f12;
-  --text: #f2f2f2;
-  --muted: #a8adb7;
-  --accent: #8fb7ff;
+  --bg: #000;
+  --fg: #d6d6d6;
+  --dim: #747474;
+  --line: #2d2d2d;
+  --link: #9db7ff;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
 }
 
 body {
@@ -15,51 +21,55 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 32px 18px;
   background: var(--bg);
-  color: var(--text);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--fg);
+  font: 13px/1.55 "Courier New", Courier, monospace;
 }
 
-.page {
-  width: min(680px, 100%);
+.screen {
+  width: min(360px, calc(100vw - 32px));
+  text-align: center;
 }
 
-.kicker {
-  margin: 0 0 18px;
-  color: var(--accent);
-  font: 700 0.82rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+.box {
+  border: 1px solid var(--line);
+  padding: 18px 20px 20px;
 }
 
+p,
 h1 {
-  max-width: 8ch;
   margin: 0;
-  font-size: clamp(3.4rem, 13vw, 7rem);
-  line-height: 0.94;
+  font: inherit;
   letter-spacing: 0;
 }
 
-.summary {
-  max-width: 30rem;
-  margin: 24px 0 40px;
-  color: var(--muted);
-  font-size: 1.15rem;
-  line-height: 1.6;
+h1 {
+  margin-top: 10px;
+  color: var(--fg);
+  font-weight: 400;
 }
 
-footer {
-  color: var(--muted);
-  font-size: 0.95rem;
+.domain,
+.line {
+  color: var(--dim);
+}
+
+.line {
+  margin-top: 10px;
+}
+
+nav {
+  margin-top: 16px;
 }
 
 a {
-  color: var(--text);
-  text-decoration-color: var(--accent);
-  text-underline-offset: 4px;
+  color: var(--link);
+  text-decoration: none;
 }
 
-@media (max-width: 520px) {
-  body {
-    place-items: start;
-  }
+a:hover,
+a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  outline: none;
 }
